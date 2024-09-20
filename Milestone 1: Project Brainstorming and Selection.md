@@ -24,6 +24,14 @@ What We Are Creating:
 
 An AI-generated desktop program that will scan an image of a building, artifact, landscape or other objects and return the name of the place (town, city, district, country, etc..) it’s from. This program will search for matching photos within an internal database containing the object through an object detection algorithm.
  
-The Purpose of Our Project: 
+Team Roles: 
 
-Tourists can take pictures of buildings or landscapes, and the app would return the location, history, and other points of interest. Analyzing excavated artifacts and identifying the geographical region they belong to.
+Jessica Babos: Project Manager, Editor, Tester, Analyst, Application Developer
+
+Andrew Hua: Application Developer, Tester, Analyst
+
+Kenneth Riles: Backend developer, Researcher, Tester
+
+Shadi Zgheib: Backend, ML/AI developer, Tester
+
+Zachary Mclaughlin: Full Stack Developer, Framework Tester
