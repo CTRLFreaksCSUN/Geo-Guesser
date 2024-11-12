@@ -19,11 +19,32 @@ class Window(ft.UserControl):
 # creates new window
 def main(screen: ft.Page):
     screen.title = "GeoVision--prototype"
+    screen.theme_mode = 'dark'
+    screen.update()
+    try:
+        # connect to MongoDB Database
+        client = MongoClient("mongodb+srv://ctrl_freaks2024:<Zwh5i908Ly0yUkMt>@geovisioncloud.jrl02.mongodb.net/?retryWrites=true&w=majority&appName=GeoVisionCloud")
 
-    # connect to MongoDB Database
-    # client = MongoClient({ connection string })
+        #print("Connected to database")
+        #db = client["ImageLocator_AI"]
+        #db.create_collection("User")
+        #db.create_collection("Image")
+        #db.create_collection("Location")
+     
+    except ConnectionError as cerr:
+        print(f"Error in MongoDB connection: {cerr}")
 
+    except RuntimeError as rerr:
+        print(f"Runtime error: {rerr}")
+
+    except TypeError as terr:
+        print(f"Invlaid type detected: {terr}")
+
+    except pymongo.errors.OperationFailure as operr:
+        print(f"Error in MongoDB authentication: {operr}")
+ 
     sign_in = Window(screen)
+    client.close()
 
 
 if __name__ == '__main__':
