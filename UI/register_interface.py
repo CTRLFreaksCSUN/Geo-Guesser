@@ -3,13 +3,13 @@ import re
 
 # loads a register page on top of already existing login page
 class register_interface(ft.UserControl):
-    def __init__(self, page):
+    def __init__(self, page, client):
         super().__init__()
-        self.build_register(page)
+        self.build_register(page, client)
         self.err_message
 
     # creates register form     
-    def build_register(self, page):
+    def build_register(self, page, client):
         new_user = ft.TextField(hint_text=' Enter new username', width=350, max_length=36)
         new_email = ft.TextField(hint_text='Enter the email you want to use', width=350, max_length=40)
         new_passw = ft.TextField(hint_text='Enter new password', width=350, password=True, can_reveal_password=True, max_length=42)
@@ -18,7 +18,7 @@ class register_interface(ft.UserControl):
         n_page = ft.Container(width=1300, height=1000, alignment=ft.alignment.center,
                                                                        content=ft.Row([ft.Column([new_user, new_email, new_passw, passw_re, self.err_message,
                                                                                ft.ElevatedButton(text='Create account',
-                                                                                                 on_click=lambda e: [self.confirm_register(e, new_user, new_passw, passw_re, new_email)])],
+                                                                                                 on_click=lambda e: [self.confirm_register(e, client, new_user, new_passw, passw_re, new_email)])],
                                                                                                  alignment=ft.MainAxisAlignment.CENTER,
                                                                                                  horizontal_alignment=ft.CrossAxisAlignment.START)],
                                                                                                  alignment=ft.MainAxisAlignment.CENTER,
@@ -29,7 +29,7 @@ class register_interface(ft.UserControl):
         page.update()
 
     # verify new user information is valid
-    def confirm_register(self, e, name, password, passw_re, email):
+    def confirm_register(self, e, client, name, password, passw_re, email):
         if(self.checkRegisterIsValid(e, name, password, passw_re, email)):
             pass
 
