@@ -3,6 +3,7 @@ import pymongo
 import DataClient
 from DataClient import DataClient
 from register_interface import register_interface
+from HomePage import HomePage
 
 # generate sign in interface
 class login_interface(ft.UserControl):
@@ -11,6 +12,7 @@ class login_interface(ft.UserControl):
         # establish database connection
         new_client = DataClient()
         connection = new_client.connect_to_client("mongodb+srv://ctrl_freaks2024:Zwh5i908Ly0yUkMt@geovisioncloud.jrl02.mongodb.net/?retryWrites=true&w=majority&appName=GeoVisionCloud")
+        self.page = page
         self.build_login(tab, page, connection)
         self.err_message
 
@@ -41,18 +43,18 @@ class login_interface(ft.UserControl):
     def confirm_login(self, e, client, name, password):
         if(self.checkLoginIsValid(e, name, 8) and self.checkLoginIsValid(e, password, 12)):
             self.err_message.visible = False
-
-        e.control.page.update()
+            HomePage(self.page)
+        self.page.update()
 
     def checkLoginIsValid(self, e, cred, length):
         if (len(cred.value) >= length):
             cred.border_color = 'black'
-            e.control.page.update()
+            self.page.update()
             return True
         else:
             cred.border_color = 'red'
             self.err_message.visible = True
-            e.control.page.update()
+            self.page.update()
             return False
 
     def refreshLoginPage(self, e, page):

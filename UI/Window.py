@@ -10,11 +10,11 @@ from DataClient import DataClient
 class Window(ft.UserControl):
     def __init__(self, page):
         super().__init__()
+        self.page=page
         login_interface(self, page)
 
     def close_app(self, e):
-        e.control.page.window.close()
-        e.control.page.update()
+        self.page.window.close()
 
 # creates new window
 def main(screen: ft.Page):
