@@ -1,0 +1,9 @@
+pip install flet azure-cognitiveservices-vision-computervision pillow requests
+
+
+# Azure credentials
+AZURE_SUBSCRIPTION_KEY="2dBJsnA8n5oJSxVXm5kPJIWzNpWwW7hAHxkVzSqSwbTihmfJLaqNJQQJ99AKACYeBjFXJ3w3AAAFACOGLuar"
+AZURE_ENDPOINT = "https://geovis.cognitiveservices.azure.com/"
+
+# Google Maps API Key
+GOOGLE_API_KEY = "AIzaSyAguajYZPdNBLSWvYWLfetpGRInLGC0ehE"
