@@ -20,7 +20,7 @@ from DataClient import DataClient
 # Azure credentialsGoogle Maps API Key
 AZURE_SUBSCRIPTION_KEY = "2dBJsnA8n5oJSxVXm5kPJIWzNpWwW7hAHxkVzSqSwbTihmfJLaqNJQQJ99AKACYeBjFXJ3w3AAAFACOGLuar"
 AZURE_ENDPOINT = "https://geovis.cognitiveservices.azure.com/"
-GOOGLE_API_KEY = "AIzaSyAguajYZPdNBLSWvYWLfetpGRInLGC0ehE"
+GOOGLE_API_KEY = "AIzaSyDyPin-fSQ8BsipK8sSV80TCsLijci2PbY"
 
 
 class HomePage(QMainWindow):
@@ -180,9 +180,8 @@ class HomePage(QMainWindow):
             return None
 
     def get_directions(self):
-        starting_location = self.starting_location_input.text()
-        destination = self.search_bar.text()
-
+        starting_location = self.starting_location.text()
+        destination = self.destination.text()
         if not starting_location or not destination:
             self.statusBar().showMessage("Enter both starting location and destination to get directions.", 5000)
             return
@@ -239,6 +238,6 @@ class HomePage(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = HomePage()
+    window = HomePage(None)
     window.show()
     sys.exit(app.exec_())
