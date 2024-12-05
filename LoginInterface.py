@@ -24,6 +24,7 @@ class LoginInterface(QWidget):
 
         # Overall layout
         main_layout = QVBoxLayout()
+        main_layout.setSpacing(10)
 
         # Title
         title_label = QLabel('GeoVision-AI')
@@ -137,6 +138,6 @@ class LoginInterface(QWidget):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    ex = LoginInterface()
+    ex = LoginInterface(None)
     ex.show()
     sys.exit(app.exec_())
