@@ -18,9 +18,9 @@ import webbrowser
 from DataClient import DataClient
 
 # Azure credentialsGoogle Maps API Key
-AZURE_SUBSCRIPTION_KEY = "2dBJsnA8n5oJSxVXm5kPJIWzNpWwW7hAHxkVzSqSwbTihmfJLaqNJQQJ99AKACYeBjFXJ3w3AAAFACOGLuar"
-AZURE_ENDPOINT = "https://geovis.cognitiveservices.azure.com/"
-GOOGLE_API_KEY = "AIzaSyDyPin-fSQ8BsipK8sSV80TCsLijci2PbY"
+AZURE_SUBSCRIPTION_KEY = "EGtF8U8ziSxlgBdvtpnvwczTCN0jfayyQYOXXy6HidlES1FJ6wzUJQQJ99ALACYeBjFXJ3w3AAAFACOGlzGm"
+AZURE_ENDPOINT = "https://geovision.cognitiveservices.azure.com/"
+GOOGLE_API_KEY = "AIzaSyAguajYZPdNBLSWvYWLfetpGRInLGC0ehE"
 
 
 from PyQt5.QtWidgets import QGridLayout
