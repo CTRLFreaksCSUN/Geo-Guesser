@@ -180,7 +180,7 @@ wsproto                                       1.2.0
 xyzservices                                   2024.9.0
 
 # Setup
-Run window.py
+Run MainWindow.py
 
 ## Purpose
 This artificial intelligence aims to help tourists identify specific locations to travel to based on captivating images of landmarks, topography, ecosystems and other geographical features using a precise global navigation system. It can also be of support to archaeologists and historians, since it can pinpoint a location from analyzing a snapshot of a distinguishable artifact, structure, or even symbols on a wall.
