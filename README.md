@@ -1,8 +1,13 @@
 # GeoVision AI
 An AI meant to return the original location that an image was taken at.
 
+## Required files
+1. Source files: MainWindow.py, LoginInterface.py, RegisterInterface.py, HomePage.py, DataClient.py, map.html
+2. Other files: eye_closed.png, eye_opened.png, scene with images.rar, UI.iml, .idea (UI folder) 
+
 # Setup
-Run MainWindow.py
+1. Install all the required files in the repository
+2. Run MainWindow.py
 
 ## Purpose
 This artificial intelligence aims to help tourists identify specific locations to travel to based on captivating images of landmarks, topography, ecosystems and other geographical features using a precise global navigation system. It can also be of support to archaeologists and historians, since it can pinpoint a location from analyzing a snapshot of a distinguishable artifact, structure, or even symbols on a wall.
